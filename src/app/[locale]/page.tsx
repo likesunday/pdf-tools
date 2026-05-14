@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import ToolCard from '@/components/layout/ToolCard';
 import AdBanner from '@/components/ads/AdBanner';
+import JsonLd from '@/components/shared/JsonLd';
 
 const pdfTools = [
   { key: 'compressPdf', href: '/tools/compress-pdf', icon: '📦', color: '#4B83FF' },
@@ -26,8 +27,22 @@ const imageTools = [
 export default function HomePage() {
   const t = useTranslations();
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'PDF Tools',
+    url: 'https://vavc.cn',
+    description: 'Free online PDF and image tools. All processing happens in your browser.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://vavc.cn/en/tools/{search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <JsonLd data={jsonLd} />
       {/* Hero */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
