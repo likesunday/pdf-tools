@@ -87,9 +87,11 @@ export default function PdfToImagePage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
             {results.map((blob, index) => (
               <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={URL.createObjectURL(blob)}
                   alt={`Page ${index + 1}`}
+                  loading="lazy"
                   className="w-full h-40 object-cover"
                 />
                 <button

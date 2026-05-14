@@ -79,6 +79,34 @@
     "imageToIco": {
       "title": "Image to ICO",
       "description": "Convert images to ICO favicon format"
+    },
+    "compressPdfTo500kb": {
+      "title": "Compress PDF to 500KB",
+      "description": "Reduce PDF file size to under 500KB online for free"
+    },
+    "compressPdfTo1mb": {
+      "title": "Compress PDF to 1MB",
+      "description": "Reduce PDF file size to under 1MB online for free"
+    },
+    "compressPdfTo2mb": {
+      "title": "Compress PDF to 2MB",
+      "description": "Reduce PDF file size to under 2MB online for free"
+    },
+    "pdfToPng": {
+      "title": "PDF to PNG",
+      "description": "Convert PDF pages to PNG images online for free"
+    },
+    "pdfToJpg": {
+      "title": "PDF to JPG",
+      "description": "Convert PDF pages to JPG images online for free"
+    },
+    "jpgToPdf": {
+      "title": "JPG to PDF",
+      "description": "Convert JPG images to PDF document online for free"
+    },
+    "pngToPdf": {
+      "title": "PNG to PDF",
+      "description": "Convert PNG images to PDF document online for free"
     }
   },
   "common": {

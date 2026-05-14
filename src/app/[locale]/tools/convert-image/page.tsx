@@ -63,9 +63,13 @@ export default function ConvertImagePage() {
       ) : !result ? (
         <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
           <div className="flex items-center gap-4 mb-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={URL.createObjectURL(file)}
               alt="Preview"
+              loading="lazy"
+              width={80}
+              height={80}
               className="w-20 h-20 object-cover rounded-lg border border-gray-200"
             />
             <div>

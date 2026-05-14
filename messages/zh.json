@@ -79,6 +79,34 @@
     "imageToIco": {
       "title": "图片转ICO",
       "description": "将图片转换为ICO图标格式"
+    },
+    "compressPdfTo500kb": {
+      "title": "PDF压缩到500KB",
+      "description": "免费在线将PDF文件压缩到500KB以下"
+    },
+    "compressPdfTo1mb": {
+      "title": "PDF压缩到1MB",
+      "description": "免费在线将PDF文件压缩到1MB以下"
+    },
+    "compressPdfTo2mb": {
+      "title": "PDF压缩到2MB",
+      "description": "免费在线将PDF文件压缩到2MB以下"
+    },
+    "pdfToPng": {
+      "title": "PDF转PNG",
+      "description": "免费在线将PDF页面转换为PNG图片"
+    },
+    "pdfToJpg": {
+      "title": "PDF转JPG",
+      "description": "免费在线将PDF页面转换为JPG图片"
+    },
+    "jpgToPdf": {
+      "title": "JPG转PDF",
+      "description": "免费在线将JPG图片转换为PDF文档"
+    },
+    "pngToPdf": {
+      "title": "PNG转PDF",
+      "description": "免费在线将PNG图片转换为PDF文档"
     }
   },
   "common": {

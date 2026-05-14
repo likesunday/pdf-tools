@@ -5,6 +5,8 @@ const tools = [
   'remove-pages', 'pdf-to-image', 'image-to-pdf', 'add-watermark',
   'add-page-numbers', 'encrypt-pdf', 'decrypt-pdf', 'html-to-pdf',
   'compress-image', 'convert-image', 'image-to-ico',
+  'compress-pdf-to-500kb', 'compress-pdf-to-1mb', 'compress-pdf-to-2mb',
+  'pdf-to-png', 'pdf-to-jpg', 'jpg-to-pdf', 'png-to-pdf',
 ];
 
 const locales = ['en', 'zh'];
