@@ -1,0 +1,110 @@
+{
+  "site": {
+    "title": "PDF Tools - Free Online PDF & Image Tools",
+    "description": "Free online tools to compress, merge, split PDFs and compress images. All processing happens in your browser - your files never leave your device."
+  },
+  "nav": {
+    "home": "Home",
+    "pdfTools": "PDF Tools",
+    "imageTools": "Image Tools",
+    "allTools": "All Tools"
+  },
+  "home": {
+    "hero": {
+      "title": "Free Online PDF & Image Tools",
+      "subtitle": "All processing happens in your browser. Your files never leave your device."
+    },
+    "categories": {
+      "pdf": "PDF Tools",
+      "image": "Image Tools"
+    }
+  },
+  "tools": {
+    "compressPdf": {
+      "title": "Compress PDF",
+      "description": "Reduce PDF file size while maintaining quality"
+    },
+    "mergePdf": {
+      "title": "Merge PDF",
+      "description": "Combine multiple PDFs into one document"
+    },
+    "splitPdf": {
+      "title": "Split PDF",
+      "description": "Split a PDF into separate documents"
+    },
+    "rotatePdf": {
+      "title": "Rotate PDF",
+      "description": "Rotate PDF pages to any orientation"
+    },
+    "removePages": {
+      "title": "Remove Pages",
+      "description": "Delete specific pages from a PDF"
+    },
+    "pdfToImage": {
+      "title": "PDF to Image",
+      "description": "Convert PDF pages to JPG or PNG images"
+    },
+    "imageToPdf": {
+      "title": "Image to PDF",
+      "description": "Convert images to a PDF document"
+    },
+    "addWatermark": {
+      "title": "Add Watermark",
+      "description": "Add text or image watermark to PDF"
+    },
+    "addPageNumbers": {
+      "title": "Add Page Numbers",
+      "description": "Add page numbers to your PDF"
+    },
+    "encryptPdf": {
+      "title": "Encrypt PDF",
+      "description": "Protect your PDF with a password"
+    },
+    "decryptPdf": {
+      "title": "Decrypt PDF",
+      "description": "Remove password protection from PDF"
+    },
+    "htmlToPdf": {
+      "title": "HTML to PDF",
+      "description": "Convert HTML content to PDF"
+    },
+    "compressImage": {
+      "title": "Compress Image",
+      "description": "Reduce image file size"
+    },
+    "convertImage": {
+      "title": "Convert Image",
+      "description": "Convert between PNG, JPG, and WebP"
+    },
+    "imageToIco": {
+      "title": "Image to ICO",
+      "description": "Convert images to ICO favicon format"
+    }
+  },
+  "common": {
+    "upload": "Drop files here or click to select",
+    "uploadHint": "or drag and drop",
+    "processing": "Processing...",
+    "download": "Download",
+    "downloadAll": "Download All",
+    "reset": "Start Over",
+    "selectFiles": "Select Files",
+    "maxFileSize": "Max file size: {size}MB",
+    "privacy": "Your files are processed locally and never uploaded to any server.",
+    "fileSelected": "{count} file(s) selected",
+    "quality": "Quality",
+    "password": "Password",
+    "rotation": "Rotation",
+    "pages": "Pages",
+    "format": "Format",
+    "position": "Position",
+    "text": "Text",
+    "opacity": "Opacity",
+    "fontSize": "Font Size"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "about": "About",
+    "tagline": "100% free. No file uploads. Everything runs in your browser."
+  }
+}

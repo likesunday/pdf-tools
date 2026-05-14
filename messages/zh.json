@@ -1,0 +1,110 @@
+{
+  "site": {
+    "title": "PDF工具箱 - 免费在线PDF和图片工具",
+    "description": "免费在线工具，压缩、合并、拆分PDF，压缩图片。所有处理在浏览器中完成，文件不会离开您的设备。"
+  },
+  "nav": {
+    "home": "首页",
+    "pdfTools": "PDF工具",
+    "imageTools": "图片工具",
+    "allTools": "所有工具"
+  },
+  "home": {
+    "hero": {
+      "title": "免费在线PDF和图片工具",
+      "subtitle": "所有处理在您的浏览器中完成，文件不会离开您的设备"
+    },
+    "categories": {
+      "pdf": "PDF工具",
+      "image": "图片工具"
+    }
+  },
+  "tools": {
+    "compressPdf": {
+      "title": "PDF压缩",
+      "description": "在保持质量的同时减小PDF文件大小"
+    },
+    "mergePdf": {
+      "title": "PDF合并",
+      "description": "将多个PDF合并为一个文档"
+    },
+    "splitPdf": {
+      "title": "PDF拆分",
+      "description": "将PDF拆分为多个独立文档"
+    },
+    "rotatePdf": {
+      "title": "PDF旋转",
+      "description": "旋转PDF页面方向"
+    },
+    "removePages": {
+      "title": "删除页面",
+      "description": "从PDF中删除指定页面"
+    },
+    "pdfToImage": {
+      "title": "PDF转图片",
+      "description": "将PDF页面转换为JPG或PNG图片"
+    },
+    "imageToPdf": {
+      "title": "图片转PDF",
+      "description": "将图片转换为PDF文档"
+    },
+    "addWatermark": {
+      "title": "添加水印",
+      "description": "为PDF添加文字或图片水印"
+    },
+    "addPageNumbers": {
+      "title": "添加页码",
+      "description": "为PDF添加页码"
+    },
+    "encryptPdf": {
+      "title": "PDF加密",
+      "description": "为PDF设置密码保护"
+    },
+    "decryptPdf": {
+      "title": "PDF解密",
+      "description": "移除PDF的密码保护"
+    },
+    "htmlToPdf": {
+      "title": "HTML转PDF",
+      "description": "将HTML内容转换为PDF"
+    },
+    "compressImage": {
+      "title": "图片压缩",
+      "description": "减小图片文件大小"
+    },
+    "convertImage": {
+      "title": "图片格式转换",
+      "description": "在PNG、JPG和WebP之间互转"
+    },
+    "imageToIco": {
+      "title": "图片转ICO",
+      "description": "将图片转换为ICO图标格式"
+    }
+  },
+  "common": {
+    "upload": "将文件拖放到此处或点击选择",
+    "uploadHint": "或拖拽文件到此处",
+    "processing": "处理中...",
+    "download": "下载",
+    "downloadAll": "下载全部",
+    "reset": "重新开始",
+    "selectFiles": "选择文件",
+    "maxFileSize": "最大文件大小：{size}MB",
+    "privacy": "您的文件在本地处理，不会上传到任何服务器。",
+    "fileSelected": "已选择 {count} 个文件",
+    "quality": "质量",
+    "password": "密码",
+    "rotation": "旋转角度",
+    "pages": "页面",
+    "format": "格式",
+    "position": "位置",
+    "text": "文本",
+    "opacity": "透明度",
+    "fontSize": "字体大小"
+  },
+  "footer": {
+    "privacy": "隐私政策",
+    "about": "关于",
+    "tagline": "100%免费，无需上传文件，所有操作在浏览器中完成。"
+  }
+}
