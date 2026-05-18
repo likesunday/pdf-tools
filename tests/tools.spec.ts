@@ -9,7 +9,7 @@ test.describe('Homepage', () => {
     await page.goto('/en');
     await expect(page.locator('h1')).toContainText('Free Online PDF & Image Tools');
     const cards = page.locator('a[href*="/tools/"]');
-    await expect(cards).toHaveCount(14);
+    await expect(cards).toHaveCount(15);
   });
 
   test('should switch language to Chinese', async ({ page }) => {
@@ -25,18 +25,14 @@ test.describe('Compress PDF', () => {
     await page.goto('/en/tools/compress-pdf');
     await expect(page.locator('h1')).toContainText('Compress PDF');
 
-    // Upload file
     const fileInput = page.locator('input[type="file"]');
     await fileInput.setInputFiles(TEST_PDF);
 
-    // Should show file info and quality slider
     await expect(page.locator('text=test.pdf')).toBeVisible();
     await expect(page.locator('input[type="range"]')).toBeVisible();
 
-    // Click compress button
     await page.click('button:has-text("Compress PDF")');
 
-    // Wait for result
     await expect(page.locator('text=smaller')).toBeVisible({ timeout: 30000 });
     await expect(page.locator('button:has-text("Download")')).toBeVisible();
   });
@@ -50,8 +46,8 @@ test.describe('Merge PDF', () => {
     const fileInput = page.locator('input[type="file"]');
     await fileInput.setInputFiles([TEST_PDF, TEST_PDF]);
 
-    // File list should show both files
-    await expect(page.locator('text=test.pdf').first()).toBeVisible();
+    // Should show thumbnail grid with file cards
+    await expect(page.locator('text=test.pdf').first()).toBeVisible({ timeout: 10000 });
     await page.click('button:has-text("Merge PDF")');
 
     await expect(page.locator('text=merged successfully')).toBeVisible({ timeout: 30000 });
@@ -67,24 +63,44 @@ test.describe('Split PDF', () => {
     const fileInput = page.locator('input[type="file"]');
     await fileInput.setInputFiles(TEST_PDF);
 
+    // File info should be visible
     await expect(page.locator('text=test.pdf')).toBeVisible();
+    // Default mode is "split by page"
     await page.click('button:has-text("Split PDF")');
 
     await expect(page.locator('text=Split into')).toBeVisible({ timeout: 30000 });
     await expect(page.locator('button:has-text("Download All")')).toBeVisible();
   });
+
+  test('should support split by interval', async ({ page }) => {
+    await page.goto('/en/tools/split-pdf');
+
+    const fileInput = page.locator('input[type="file"]');
+    await fileInput.setInputFiles(TEST_PDF);
+
+    await expect(page.locator('text=test.pdf')).toBeVisible();
+
+    // Switch to interval mode
+    await page.click('button:has-text("Fixed Interval")');
+    await expect(page.locator('text=Pages per file')).toBeVisible();
+  });
 });
 
 test.describe('Rotate PDF', () => {
-  test('should upload PDF and rotate', async ({ page }) => {
+  test('should upload PDF and show page thumbnails', async ({ page }) => {
     await page.goto('/en/tools/rotate-pdf');
     await expect(page.locator('h1')).toContainText('Rotate PDF');
 
     const fileInput = page.locator('input[type="file"]');
     await fileInput.setInputFiles(TEST_PDF);
 
-    await expect(page.locator('text=test.pdf')).toBeVisible();
-    await page.click('button:has-text("90°")');
+    // Wait for thumbnails to load
+    await expect(page.locator('text=Click pages to rotate individually')).toBeVisible({ timeout: 15000 });
+
+    // Click "All" to rotate all pages
+    await page.click('button:has-text("All")');
+
+    // Now the rotate button should be enabled
     await page.click('button:has-text("Rotate PDF")');
 
     await expect(page.locator('button:has-text("Download")')).toBeVisible({ timeout: 30000 });
@@ -92,15 +108,24 @@ test.describe('Rotate PDF', () => {
 });
 
 test.describe('Remove Pages', () => {
-  test('should upload PDF and remove pages', async ({ page }) => {
+  test('should upload PDF and select pages for removal', async ({ page }) => {
     await page.goto('/en/tools/remove-pages');
     await expect(page.locator('h1')).toContainText('Remove Pages');
 
     const fileInput = page.locator('input[type="file"]');
     await fileInput.setInputFiles(TEST_PDF);
 
-    await expect(page.locator('text=test.pdf')).toBeVisible();
-    await page.fill('input[placeholder="1, 3, 5"]', '2');
+    // Wait for page thumbnails to load
+    await expect(page.locator('text=Click pages to select for removal')).toBeVisible({ timeout: 15000 });
+
+    // Click first page thumbnail to select it
+    const firstPage = page.locator('[class*="cursor-pointer"]').first();
+    await firstPage.click();
+
+    // Should show pages to remove count
+    await expect(page.locator('text=Pages to remove')).toBeVisible();
+
+    // Click remove button
     await page.click('button:has-text("Remove Pages")');
 
     await expect(page.locator('button:has-text("Download")')).toBeVisible({ timeout: 30000 });
@@ -115,7 +140,10 @@ test.describe('PDF to Image', () => {
     const fileInput = page.locator('input[type="file"]');
     await fileInput.setInputFiles(TEST_PDF);
 
-    await page.click('button:has-text("PNG")');
+    // File info should be visible
+    await expect(page.locator('text=test.pdf')).toBeVisible();
+
+    // Click convert button
     await page.click('button:has-text("PDF to Image")');
 
     await expect(page.locator('button:has-text("Download All")')).toBeVisible({ timeout: 30000 });
@@ -130,7 +158,10 @@ test.describe('Image to PDF', () => {
     const fileInput = page.locator('input[type="file"]');
     await fileInput.setInputFiles(TEST_IMAGE);
 
-    await expect(page.locator('text=test.png')).toBeVisible();
+    // Should show image thumbnail with filename
+    await expect(page.locator('text=test.png')).toBeVisible({ timeout: 10000 });
+
+    // Click convert button
     await page.click('button:has-text("Image to PDF")');
 
     await expect(page.locator('text=converted to PDF')).toBeVisible({ timeout: 30000 });
@@ -146,7 +177,9 @@ test.describe('Add Watermark', () => {
     const fileInput = page.locator('input[type="file"]');
     await fileInput.setInputFiles(TEST_PDF);
 
-    await page.fill('input[type="text"]', 'CONFIDENTIAL');
+    // Fill in watermark text
+    const textInput = page.locator('input[type="text"]').first();
+    await textInput.fill('CONFIDENTIAL');
     await page.click('button:has-text("Add Watermark")');
 
     await expect(page.locator('button:has-text("Download")')).toBeVisible({ timeout: 30000 });
@@ -161,7 +194,10 @@ test.describe('Add Page Numbers', () => {
     const fileInput = page.locator('input[type="file"]');
     await fileInput.setInputFiles(TEST_PDF);
 
-    await page.click('button:has-text("Bottom Center")');
+    // Should show the position grid and format options
+    await expect(page.locator('text=Position')).toBeVisible({ timeout: 10000 });
+
+    // Click the add page numbers button
     await page.click('button:has-text("Add Page Numbers")');
 
     await expect(page.locator('button:has-text("Download")')).toBeVisible({ timeout: 30000 });
@@ -192,10 +228,8 @@ test.describe('Decrypt PDF', () => {
     await fileInput.setInputFiles(TEST_PDF);
 
     await page.fill('input[type="password"]', 'test123');
-    // This PDF is not encrypted, so it should still process
     await page.click('button:has-text("Decrypt PDF")');
 
-    // Should either show download or an error - both are valid states
     const downloadOrError = page.locator('button:has-text("Download"), .bg-red-50');
     await expect(downloadOrError.first()).toBeVisible({ timeout: 30000 });
   });

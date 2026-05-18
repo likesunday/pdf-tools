@@ -130,6 +130,112 @@
     "opacity": "透明度",
     "fontSize": "字体大小"
   },
+  "merge": {
+    "dragToReorder": "拖拽调整文件顺序",
+    "addMore": "添加更多文件",
+    "filesCount": "{count} 个文件准备合并"
+  },
+  "split": {
+    "splitByPage": "按页拆分",
+    "splitByRange": "按范围拆分",
+    "splitByInterval": "固定间隔",
+    "everyPage": "每页生成一个独立PDF",
+    "customRange": "自定义页码范围",
+    "rangeHint": "如 1-3, 4-6, 7-10",
+    "interval": "每个文件的页数",
+    "addRange": "添加范围",
+    "mergeRanges": "将所有范围合并为一个PDF",
+    "willCreate": "将生成 {count} 个PDF文件"
+  },
+  "rotate": {
+    "rotateLeft": "向左旋转",
+    "rotateRight": "向右旋转",
+    "selectAll": "全部",
+    "selectPortrait": "竖版",
+    "selectLandscape": "横版",
+    "resetAll": "重置全部",
+    "direction": "方向",
+    "selectPages": "选择要旋转的页面",
+    "clickToRotate": "点击页面可单独旋转"
+  },
+  "removePages": {
+    "clickToSelect": "点击页面选择要删除的页面",
+    "shiftSelect": "按住 Shift 可选择范围",
+    "totalPages": "总页数",
+    "pagesToRemove": "待删除页数",
+    "selected": "已选择"
+  },
+  "pdfToImage": {
+    "pageToImage": "整页转换",
+    "extractImages": "提取图片",
+    "pageToImageDesc": "将每页转换为图片",
+    "extractImagesDesc": "提取PDF中的嵌入图片",
+    "qualityNormal": "普通",
+    "qualityHigh": "高质量",
+    "recommended": "推荐"
+  },
+  "imageToPdf": {
+    "orientation": "页面方向",
+    "portrait": "纵向",
+    "landscape": "横向",
+    "pageSize": "页面大小",
+    "fitImage": "适配图片尺寸",
+    "a4": "A4 (297×210 mm)",
+    "letter": "US Letter (215×279 mm)",
+    "margin": "边距",
+    "noMargin": "无边距",
+    "smallMargin": "小边距",
+    "bigMargin": "大边距",
+    "mergeAll": "合并所有图片为一个PDF",
+    "dragToReorder": "拖拽调整图片顺序",
+    "addMore": "添加更多图片"
+  },
+  "pageNumbers": {
+    "startNumber": "起始页码",
+    "format": "格式",
+    "formatNumber": "1, 2, 3...",
+    "formatPageOf": "第 X 页 / 共 Y 页",
+    "preview": "预览"
+  },
+  "watermark": {
+    "textTab": "文字水印",
+    "imageTab": "图片水印",
+    "textPlaceholder": "输入水印文字",
+    "font": "字体",
+    "fontColor": "字体颜色",
+    "mosaic": "平铺整页",
+    "layer": "图层",
+    "layerOver": "在内容上方",
+    "layerUnder": "在内容下方",
+    "pageRange": "页面范围",
+    "pageFrom": "从",
+    "pageTo": "到",
+    "allPages": "所有页面",
+    "addImage": "添加图片",
+    "changeImage": "更换图片",
+    "imageScale": "图片缩放",
+    "preview": "预览",
+    "rotationOptions": {
+      "none": "不旋转",
+      "deg45": "45°",
+      "deg90": "90°",
+      "deg135": "135°",
+      "deg180": "180°",
+      "degN45": "-45°",
+      "degN90": "-90°"
+    },
+    "positionOptions": {
+      "topLeft": "左上",
+      "topCenter": "上中",
+      "topRight": "右上",
+      "centerLeft": "左中",
+      "center": "居中",
+      "centerRight": "右中",
+      "bottomLeft": "左下",
+      "bottomCenter": "下中",
+      "bottomRight": "右下"
+    }
+  },
   "footer": {
     "privacy": "隐私政策",
     "about": "关于",

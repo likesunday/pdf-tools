@@ -1,24 +1,36 @@
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 
 export type Position = 'bottom-center' | 'bottom-left' | 'bottom-right' | 'top-center' | 'top-left' | 'top-right';
+export type NumberFormat = 'number' | 'pageOf';
 
 export interface PageNumberOptions {
   position: Position;
   fontSize: number;
   startNumber: number;
+  format?: NumberFormat;
 }
 
 export async function addPageNumbers(
   fileBuffer: ArrayBuffer,
-  options: PageNumberOptions = { position: 'bottom-center', fontSize: 12, startNumber: 1 }
+  options: PageNumberOptions = { position: 'bottom-center', fontSize: 12, startNumber: 1, format: 'number' }
 ): Promise<Uint8Array> {
   const pdfDoc = await PDFDocument.load(fileBuffer);
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const pages = pdfDoc.getPages();
+  const totalPages = pages.length;
+  const format = options.format || 'number';
 
   pages.forEach((page, index) => {
     const { width, height } = page.getSize();
-    const text = String(index + options.startNumber);
+    const pageNum = index + options.startNumber;
+
+    let text: string;
+    if (format === 'pageOf') {
+      text = `Page ${pageNum} of ${totalPages + options.startNumber - 1}`;
+    } else {
+      text = String(pageNum);
+    }
+
     const textWidth = font.widthOfTextAtSize(text, options.fontSize);
 
     let x: number;

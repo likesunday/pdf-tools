@@ -130,6 +130,112 @@
     "opacity": "Opacity",
     "fontSize": "Font Size"
   },
+  "merge": {
+    "dragToReorder": "Drag to reorder files",
+    "addMore": "Add more files",
+    "filesCount": "{count} files ready to merge"
+  },
+  "split": {
+    "splitByPage": "Split by Page",
+    "splitByRange": "Split by Range",
+    "splitByInterval": "Fixed Interval",
+    "everyPage": "Every page as separate PDF",
+    "customRange": "Custom page ranges",
+    "rangeHint": "e.g. 1-3, 4-6, 7-10",
+    "interval": "Pages per file",
+    "addRange": "Add Range",
+    "mergeRanges": "Merge all ranges into one PDF",
+    "willCreate": "Will create {count} PDF files"
+  },
+  "rotate": {
+    "rotateLeft": "Rotate Left",
+    "rotateRight": "Rotate Right",
+    "selectAll": "All",
+    "selectPortrait": "Portrait",
+    "selectLandscape": "Landscape",
+    "resetAll": "Reset All",
+    "direction": "Direction",
+    "selectPages": "Select pages to rotate",
+    "clickToRotate": "Click pages to rotate individually"
+  },
+  "removePages": {
+    "clickToSelect": "Click pages to select for removal",
+    "shiftSelect": "Hold Shift to select range",
+    "totalPages": "Total pages",
+    "pagesToRemove": "Pages to remove",
+    "selected": "selected"
+  },
+  "pdfToImage": {
+    "pageToImage": "Page to Image",
+    "extractImages": "Extract Images",
+    "pageToImageDesc": "Convert each page to an image",
+    "extractImagesDesc": "Extract embedded images from PDF",
+    "qualityNormal": "Normal",
+    "qualityHigh": "High",
+    "recommended": "Recommended"
+  },
+  "imageToPdf": {
+    "orientation": "Page Orientation",
+    "portrait": "Portrait",
+    "landscape": "Landscape",
+    "pageSize": "Page Size",
+    "fitImage": "Fit (Same as image)",
+    "a4": "A4 (297×210 mm)",
+    "letter": "US Letter (215×279 mm)",
+    "margin": "Margin",
+    "noMargin": "No margin",
+    "smallMargin": "Small",
+    "bigMargin": "Big",
+    "mergeAll": "Merge all images in one PDF",
+    "dragToReorder": "Drag to reorder images",
+    "addMore": "Add more images"
+  },
+  "pageNumbers": {
+    "startNumber": "Start Number",
+    "format": "Format",
+    "formatNumber": "1, 2, 3...",
+    "formatPageOf": "Page X of Y",
+    "preview": "Preview"
+  },
+  "watermark": {
+    "textTab": "Place Text",
+    "imageTab": "Place Image",
+    "textPlaceholder": "Enter watermark text",
+    "font": "Font",
+    "fontColor": "Font Color",
+    "mosaic": "Tile across page",
+    "layer": "Layer",
+    "layerOver": "Over content",
+    "layerUnder": "Under content",
+    "pageRange": "Page Range",
+    "pageFrom": "From",
+    "pageTo": "To",
+    "allPages": "All pages",
+    "addImage": "Add Image",
+    "changeImage": "Change Image",
+    "imageScale": "Image Scale",
+    "preview": "Preview",
+    "rotationOptions": {
+      "none": "No rotation",
+      "deg45": "45°",
+      "deg90": "90°",
+      "deg135": "135°",
+      "deg180": "180°",
+      "degN45": "-45°",
+      "degN90": "-90°"
+    },
+    "positionOptions": {
+      "topLeft": "Top Left",
+      "topCenter": "Top Center",
+      "topRight": "Top Right",
+      "centerLeft": "Center Left",
+      "center": "Center",
+      "centerRight": "Center Right",
+      "bottomLeft": "Bottom Left",
+      "bottomCenter": "Bottom Center",
+      "bottomRight": "Bottom Right"
+    }
+  },
   "footer": {
     "privacy": "Privacy Policy",
     "about": "About",
