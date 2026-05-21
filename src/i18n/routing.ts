@@ -4,7 +4,9 @@ import { locales, defaultLocale } from './config';
 
 export const routing = defineRouting({
   locales,
-  defaultLocale
+  defaultLocale,
+  localePrefix: 'always',
+  localeDetection: false
 });
 
 export const { Link, redirect, usePathname, useRouter } = createNavigation(routing);

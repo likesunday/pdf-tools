@@ -32,8 +32,17 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       title: t('title'),
       description: t('description'),
       type: 'website',
+      url: `https://www.vavc.cn/${locale}`,
       locale: locale === 'zh' ? 'zh_CN' : 'en_US',
       siteName: 'PDF Tools',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'PDF Tools - Free Online PDF & Image Tools',
+        },
+      ],
     },
   };
 }
