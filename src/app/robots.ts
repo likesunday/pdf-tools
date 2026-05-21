@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://vavc.cn/sitemap.xml',
+    sitemap: 'https://www.vavc.cn/sitemap.xml',
   };
 }

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       template: `%s | PDF Tools`,
     },
     description: t('description'),
-    metadataBase: new URL('https://vavc.cn'),
+    metadataBase: new URL('https://www.vavc.cn'),
     alternates: {
       canonical: `/${locale}`,
       languages: {

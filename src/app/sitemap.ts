@@ -12,7 +12,7 @@ const tools = [
 const locales = ['en', 'zh'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://vavc.cn';
+  const baseUrl = 'https://www.vavc.cn';
   const entries: MetadataRoute.Sitemap = [];
 
   for (const locale of locales) {

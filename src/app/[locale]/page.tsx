@@ -31,11 +31,11 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'PDF Tools',
-    url: 'https://vavc.cn',
+    url: 'https://www.vavc.cn',
     description: 'Free online PDF and image tools. All processing happens in your browser.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://vavc.cn/en/tools/{search_term_string}',
+      target: 'https://www.vavc.cn/en/tools/{search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };
